@@ -1,0 +1,17 @@
+{
+  "name": "github-action-parse-string-and-select-object",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build index.js --license licenses.txt"
+  },
+  "keywords": [],
+  "author": "leodoc",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0",
+    "yaml": "^1.10.2"
+  }
+}

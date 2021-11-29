@@ -1,0 +1,41 @@
+name: "github-action-parse-string-and-select-object"
+description: |
+  find and return an object by a property from the string,
+  outputs: by map property
+inputs:
+  source:
+    description: "string"
+    required: true
+    default: ""
+  map:
+    description: |
+      list of objects, example:
+        |
+      - name: dev1
+        tag: "[DEV1]"
+        value: server-dev1
+      - name: dev2
+        tag: "[DEV2]"
+        value: server-dev2
+    required: true
+    default: ""
+  property:
+    description: "search field from map"
+    required: true
+    default: "tag"
+  fail:
+    description: "true|false"
+    required: false
+    default: "true"
+outputs:
+  status: # id of output
+    description: "status: ok|fail"
+  name: # id of output
+    description: "example: value of name"
+  tag: # id of output
+    description: "example: value of tag"
+  value: # id of output
+    description: "example: value of value"
+runs:
+  using: "node12"
+  main: "dist/index.js"
